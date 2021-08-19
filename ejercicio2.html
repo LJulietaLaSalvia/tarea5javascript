@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres</title>
+    <link rel="stylesheet" href="Resto de los archivos usados/estilos2.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Bienvenido/a a nuestra página web</h3>
+        <p>Mejorando siempre para vos</p>
+
+        <div class="titulo">
+            <h2>Hamburguesas Lomas del mirador</h2>
+            <img src="Resto de los archivos usados/hamburguesa.png"/>
+        </div>
+        <div class="imagenes">
+            
+                <div class="img"><img src="Resto de los archivos usados/hambur1.jpg"></div>
+                <div class="img"><img src="Resto de los archivos usados/hambur2.jpg"></div>
+                <div class="img"><img src="Resto de los archivos usados/hambur3.webp"></div>
+                <div class="img"><img src="Resto de los archivos usados/hambur4.jpg"></div>
+            
+            <div class="nosotros">
+                <h3>Para nosotros es muy importante tu opinión sobre nuestras hamburguesas. Por eso te invitamos a dejarnos un comentario en la cajita</h3>
+        </div>
+        <div class="box">
+            <textarea rows="3" maxlength="100" id="mensaje"></textarea>
+            <div id="contador">0/100</div>
+
+            <p>
+                <button onclick="enviar()">Enviar</button>
+            </p>
+          </div>
+        </div>
+       
+        
+    </div>
+   
+
+      <script>
+        const mensaje = document.getElementById('mensaje');
+        const contador = document.getElementById('contador');
+
+        mensaje.addEventListener('input', function(e) {
+        const target = e.target;
+        const longitudMax = target.getAttribute('maxlength');
+        const longitudAct = target.value.length;
+        contador.innerHTML = `${longitudAct}/${longitudMax}`;
+        });
+    function enviar(){
+        alert("Gracias por dejarnos tu opinión");
+        }
+      </script>
+</body>
+</html>
