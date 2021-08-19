@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo Cambia Color</title>
+    <link rel="stylesheet" href="Resto de los archivos usados/estilo.css">
+  
+</head>
+<body>
+    <h1>Bienvenido/a</h1>
+    <button class="box red" onclick="botonrojo()">
+        <h3>Hacer clic sobre este cuadrado para poner el fondo rojo</h3>
+      </button>
+        
+      <button class="box blue" onclick="botonazul()">
+        <h3>Hacer clic sobre este cuadrado para poner el fondo azul</h3>
+      </button>
+        
+      <button class="box violet" onclick="botonvioleta()">
+        <h3>Hacer clic sobre este cuadrado para poner el fondo violeta</h3>
+      </button>
+
+      <script>
+          var body = document.body;
+            function botonrojo(){
+             body.classList.remove("violet");
+            body.classList.remove("blue");
+            body.classList.add("red");
+             }
+  
+            function botonazul(){
+            body.classList.remove("red");
+            body.classList.remove("violet");
+            body.classList.add("blue");
+            }
+  
+            function botonvioleta(){
+             body.classList.remove("red");
+             body.classList.remove("blue");
+             body.classList.add("violet");
+            }
+      </script>
+    
+</body>
+</html>
